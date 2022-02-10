@@ -3,24 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan Nutricional</title>
+    <title>NutriFit - Home</title>
     <link rel="stylesheet" href="../static/css/home.css"/>
 </head>
 <body>
     <header class="navbar">
         <div class="navbar__brand">
-            <h1 class="navbar__user">Eduardo de Tena</h1>
+            <h1 class="navbar__user">[Username]</h1>
             <img src="/static/logo.png" alt="logo" class="navbar__logo"/>
         </div>
         <div class="navbar__menu">
             <ul class="navbar__navigation">
-                <li class="navbar__navigation-item"><a href="#" class="navbar__link">Siguiente comida</a></li>
-                <li class="navbar__navigation-item"><a href="#" class="navbar__link">Plan nutricional</a></li>
+                <li class="navbar__navigation-item"><a href="{{ url_for('profile') }}" class="navbar__link">Perfil</a></li>
+                <li class="navbar__navigation-item"><a href="{{ url_for('nutri') }}" class="navbar__link">Plan nutricional</a></li>
             </ul>
         </div>
     </header>
-    <main>
-
+    <main class="main">
+        <section class="section">
+            <div class="section__left-title">
+                <h2 >Media mañana</h2>
+                <h2>➼</h2>
+                <h2>10:30 PM</h2>
+            </div>
+            <article class="entry">
+                <ul>
+                    <li>Café con soja y miel</li>
+                    <li>Tostadas con salmón, aguacate y huevo revuelto</li>
+                    <li>Zumo de naranja natural</li>
+                </ul>
+            </article>
+            <button class="section__button" type="button" onclick="window.location.href='{{ url_for('nextmeal') }}';">
+                More info
+            </button>
+        </section>
+        <section class="section">
+            <h2 class="section__right-title">Resumen plan nutricional</h2>
+            <article class="entry">
+                <ul>
+                    <li>Tipo: Ganar masa muscular</li>
+                    <li>Días/semana: 7</li>
+                    <li>Días desde inicio: 15</li>
+                    <li>Ratio de cumplimiento: 75%</li>
+                </ul>
+            </article>
+            <button class="section__button" type="button" onclick="window.location.href='{{ url_for('nutri') }}';">
+                More info
+            </button>
+        </section>
     </main>
     <footer>
 

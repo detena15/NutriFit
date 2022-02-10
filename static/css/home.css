@@ -14,7 +14,7 @@ body{
 }
 
 .navbar{
-    max-width: 800px;
+    max-width: 1000px;
     margin: 50px auto;
     padding: 0 20px;
     display: flex;
@@ -29,6 +29,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 450px;
 }
 
 .navbar__user{
@@ -43,12 +44,18 @@ body{
     max-height: 100px;
 }
 
+.navbar__menu{
+    width: 450px;
+}
+
 .navbar__navigation{
     list-style: none;
     padding: 0;
+    margin: 0 20px;
     display: flex;
     flex-direction: row;
     color: #5c6b70;
+    justify-content: space-around;
 }
 
 .navbar__navigation-item{
@@ -58,4 +65,45 @@ body{
 .navbar__link{
     text-decoration: none;
     color: inherit;
+}
+
+.main{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.section{
+    width: 450px;
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+
+.section__left-title{
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section__right-title{
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.section__button{
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    margin: 0 150px;
+}
+
+.section__button:hover{
+    background-color: forestgreen;
 }
